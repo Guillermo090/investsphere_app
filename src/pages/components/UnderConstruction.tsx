@@ -1,4 +1,4 @@
-import underConstructionLogo from '../assets/under_construction.svg'
+import underConstructionLogo from '../../assets/under_construction.svg'
 
 function UnderConstruction() {
 

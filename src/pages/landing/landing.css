@@ -1,17 +1,22 @@
+/* Contenedor principal */
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Asegura que cubra toda la altura de la ventana */
     text-align: center;
+    padding: 20px; /* Añade un poco de espacio alrededor del contenido */
 }
 
+/* Barra de navegación */
 .nav {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
+/* Estilo del botón */
 .btn {
     padding: 10px 20px;
     background-color: #4CAF50;
