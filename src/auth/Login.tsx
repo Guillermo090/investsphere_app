@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext'; // Importa el hook personalizado para el contexto
+import './login.css'; // Importa el archivo CSS
 
 const Login: React.FC = () => {
     const initialUser = {
@@ -28,23 +29,25 @@ const Login: React.FC = () => {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            <input
-                type="text"
-                placeholder="Username"
-                name="username"
-                value={username}
-                onChange={handleLoginChange}
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                value={password}
-                onChange={handleLoginChange}
-            />
-            <button onClick={handleLogin}>Login</button>
+        <div className="login-container">
+            <div className="login-form">
+                <h2>Login</h2>
+                <input
+                    type="text"
+                    placeholder="Username"
+                    name="username"
+                    value={username}
+                    onChange={handleLoginChange}
+                />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    value={password}
+                    onChange={handleLoginChange}
+                />
+                <button onClick={handleLogin}>Login</button>
+            </div>
         </div>
     );
 };
