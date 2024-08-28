@@ -7,6 +7,7 @@ const NavBar: React.FC = () => {
     return (
         <div style={{ marginBottom: '20px' }}>
             <button onClick={() => navigate('/dashboard')}>Dashboard</button>
+            <button onClick={() => navigate('/investments')}>Investmets</button>
             <button onClick={() => navigate('/profile')}>Profile</button>
             <button onClick={() => navigate('/settings')}>Settings</button>
         </div>

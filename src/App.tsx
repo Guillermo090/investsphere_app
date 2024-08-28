@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/landing/LandingPage';
 import Login from './auth/Login';
-import Home from './pages/home/Home';
+import Investments from './pages/investments/Investments';
 import Dashboard from './pages/dashboard/Dashboard';
 import Profile from './pages/profile/Profile';
 import Settings from './pages/settings/Settings';
 import ProtectedRoute from './auth/ProtectedRoute';
 import { AuthProvider } from './auth/AuthContext';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
     return (
@@ -17,18 +18,18 @@ const App = () => {
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/login" element={<Login />} />
                     <Route
-                        path="/home"
-                        element={
-                            <ProtectedRoute>
-                                <Home />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
                         path="/dashboard"
                         element={
                             <ProtectedRoute>
                                 <Dashboard />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/investments"
+                        element={
+                            <ProtectedRoute>
+                                <Investments />
                             </ProtectedRoute>
                         }
                     />

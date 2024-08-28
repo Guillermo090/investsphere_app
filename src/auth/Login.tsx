@@ -1,26 +1,61 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../auth/AuthContext'; // Importa el hook personalizado para el contexto
-import './login.css'; // Importa el archivo CSS
+import { useAuth } from '../auth/AuthContext';
+import './login.css';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+
+const INVESTSPHERE_APP_BACKEND_URL = import.meta.env.VITE_INVESTSPHERE_APP_BACKEND_URL;
 
 const Login: React.FC = () => {
     const initialUser = {
-        username: '',
+        email: '',
         password: ''
     };
     const [user, setUser] = useState(initialUser);
-    const { username, password } = user;
+    const { email, password } = user;
 
-    const { setIsAuth } = useAuth(); // Usa el hook para obtener setIsAuth
+    const { setIsAuth } = useAuth();
     const navigate = useNavigate();
 
-    const handleLogin = () => {
-        if (username === 'user' && password === 'pass') {
-            setIsAuth(true);
-            navigate('/home');
-        } else {
-            alert('Credenciales incorrectas');
+   
+    const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
+
+        event.preventDefault();
+
+        if (email === '' || password === '') {
+            toast.error(' Ingrese datos para acceder', {
+                position: "top-right",
+                closeOnClick: true,
+            });
+            return
         }
+
+        axios({
+            method: 'post',
+            url: INVESTSPHERE_APP_BACKEND_URL +  '/api/token/',
+            data: { email, password }
+        })
+        .then(({data}) => {
+
+            const userObject = {
+                token: data.token,
+                email: email
+            };
+
+            localStorage.setItem('user', JSON.stringify(userObject));
+
+            setIsAuth(true);
+            navigate('/dashboard');
+        })
+        .catch(({response}) => {
+            console.log('Error:', response.data.detail);
+            toast.error('Datos inválidos' , {
+                position: "top-right",
+                autoClose: 5000,
+                closeOnClick: true
+            });
+        });
     };
 
     const handleLoginChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,13 +65,14 @@ const Login: React.FC = () => {
 
     return (
         <div className="login-container">
-            <div className="login-form">
+            <ToastContainer />
+            <form onSubmit={handleLogin} className="login-form">
                 <h2>Login</h2>
                 <input
                     type="text"
-                    placeholder="Username"
-                    name="username"
-                    value={username}
+                    placeholder="Email"
+                    name="email"
+                    value={email}
                     onChange={handleLoginChange}
                 />
                 <input
@@ -46,8 +82,8 @@ const Login: React.FC = () => {
                     value={password}
                     onChange={handleLoginChange}
                 />
-                <button onClick={handleLogin}>Login</button>
-            </div>
+                <button type='submit'>Login</button>
+            </form>
         </div>
     );
 };
