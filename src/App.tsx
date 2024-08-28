@@ -7,6 +7,7 @@ import Profile from './pages/profile/Profile';
 import Settings from './pages/settings/Settings';
 import ProtectedRoute from './auth/ProtectedRoute';
 import { AuthProvider } from './auth/AuthContext';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
     return (
