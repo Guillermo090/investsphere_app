@@ -1,13 +1,20 @@
 import React from 'react';
-import NavBar from '../components/NavBar'
+import RouteHeader from '../components/ui/RouteHeader';
+import NavBar from '../components/ui/NavBar';
 
 const Dashboard: React.FC = () => {
     return (
-        <div>
-            <NavBar /> {/* Incluye la barra de navegación */}
-            <h2>Dashboard</h2>
-            <p>Bienvenido al panel de control.</p>
-            {/* Aquí puedes agregar más contenido específico del Dashboard */}
+        <div className='page__container'>
+            <NavBar />
+            <div className="page__content__container">
+            
+                <RouteHeader />
+
+                <div className="principal__content">
+                    <h2>Dashboard</h2>
+                    <p>Bienvenido al panel de control.</p>
+                </div>
+            </div>
         </div>
     );
 };

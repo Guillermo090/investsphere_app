@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar__container {
+    display:none;
+    width: 75px;
+    height: 75px;   
+    margin-right: 3px;
+    /* border:1px solid red; */
+}
+
+.sidebar__top {
+    width: inherit;
+
+
+    /* border:1px solid red; */
+}
+
+.sidebar__toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+
+    /* border:1px solid red; */
+}
+
+.toggle__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    border-radius: 15px;
+    /* border:1px solid red; */
+}
+
+.toggle__icon{
+    /* border:1px solid red; */
+    width: 60%;
+    height: 60%;
+
+}
+
+.sidebar__logo {
+    display: none;
+}
+
+.navbar__container {
+    display: none;
+    /* border:1px solid red; */
+}
+
+.sidebar__bottom {
+    display:none;
+
+
+
+    /* border:1px solid red; */
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .sidebar__logo {
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: inherit;
+        height: 75px;
+        margin-bottom: 20px;
+        /* border:1px solid red; */
+    }
+
+    .sidebar__logo__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: inherit;
+        height: inherit;
+        border-radius: 15px;
+        /* border:1px solid red; */
+    }
+    
+    .sidebar__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh ;
+        box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);  
+        border-radius: 15px;
+    }
+    
+
+    .sidebar__bottom {
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: inherit;
+        height: 75px;
+        margin-bottom: 20px;
+    
+        /* border:1px solid red; */
+    }
+
+    .sidebar__toggle{
+        display: none;
+    }
+
+    .navbar__container {
+        display: flex;
+        margin-top: 20px;
+        width: inherit;
+        height: 60vh;
+    }
+
+    .navbar__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        /* border:1px solid green; */
+        margin-bottom: 0px;
+        padding: 0;
+        width: inherit;
+        list-style: none;
+    }
+
+    .navbar__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 55px;
+        border-radius: 15px;
+    }
+
+    .navbar__icon {
+        width: 60%;
+        height: 60%;
+    }
+
+    .navbar__item:hover {
+        background-color: #f0f0f0;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+}
