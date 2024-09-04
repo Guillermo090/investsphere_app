@@ -123,6 +123,52 @@
     justify-content: center;
 }
 
+#start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.top_start {
+    text-align: center;
+    height: 50vh;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.slogan {
+    font-size: 2rem;
+    color: #0A437D;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.sub-slogan {
+    font-size: 1rem;
+    color: #6c757d;
+    margin: 10px 0;
+    max-width: 80%; /* Ajustar ancho máximo para legibilidad */
+}
+
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #1AB0D9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #0A437D;
+    color: white;
+}
+
 #about, #contact_us {
     display: flex;
     flex-direction: column;
