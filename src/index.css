@@ -1,4 +1,4 @@
- /* Contenedor principal */
+/* Contenedor principal */
 * {
   margin: 0;
   padding: 0;
@@ -13,26 +13,19 @@
 
 .page__container {
   display: flex;
-  /* padding:10px; */
   width: inherit;
 }
-
 
 .page__content__container {
   display: flex;
   flex-direction: column;
-  
   align-items: center;
   width: 100%;
   background-color: #FBFBFB;
-  /* border:1px solid red; */
-
 }
 
-
 .principal__content {
-  /* border:1px solid red; */
-  border:1px solid rgba(0, 0, 0, 0.1);  
+  border: 1px solid rgba(0, 0, 0, 0.1);  
   background-color: white;
   border-radius: 10px;
   padding: 50px;
