@@ -36,7 +36,7 @@
 }
 
 .logo-img {
-    height: 150px; /* Ajusta el tamaño del logo según sea necesario */
+    height: 150px;  
 }
 
 /* Navegación */
@@ -68,7 +68,6 @@
     color: #1AB0D9 !important;
 }
 
-/* Efecto de animación para el enlace */
 .nav-link::after {
     content: '';
     display: block;
@@ -102,9 +101,6 @@
     border:none;
 }
 
- 
-
-/* Contenido principal (ajustado para dejar espacio al header) */
 .main-content {
     width: 100vw;
 }
@@ -146,7 +142,7 @@ footer {
     padding: 20px;
     border-top: 1px solid #e7e7e7;
     text-align: center;
-    position: fixed; /* Hace que el footer sea fijo al final de la página */
+    position: fixed; 
     bottom: 0;
     width: 100%;
 }
@@ -174,7 +170,7 @@ footer p {
     }
 
     .logo-img {
-        height: 100px; /* Ajusta el tamaño del logo según sea necesario */
+        height: 100px; 
     }
     .btn-start{
         display: inline-block;
