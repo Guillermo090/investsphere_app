@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './landing.css';
-import UnderConstruction from '../components/UnderConstruction';
 import Logo from '../../assets/logo.png'
 import { CContainer } from '@coreui/react';
 
@@ -24,9 +23,7 @@ const LandingPage = () => {
 
             <main className="main-content">
                 <div id="carousel">
-                    <UnderConstruction />  
-                    {/* <h1>carousell</h1> */}
-                    
+                    <img src={Logo} alt="Logo"  />
                 </div>
                 <div id='about'> 
                     <h1>About Us</h1>

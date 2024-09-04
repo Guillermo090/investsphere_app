@@ -1,6 +1,6 @@
 import React   from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BsPerson, BsBarChartLine, BsGear, BsHouse, BsJustify } from "react-icons/bs";
+import { BsPerson, BsBarChartLine, BsGear, BsHouse } from "react-icons/bs";
 import Logo from '../../../assets/logo.png'
 import './navbar.css';
 
