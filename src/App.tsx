@@ -6,13 +6,13 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Profile from './pages/profile/Profile';
 import Settings from './pages/settings/Settings';
 import ProtectedRoute from './auth/ProtectedRoute';
-import { AuthProvider } from './auth/AuthContext';
+import { AppProviders } from './providers/AppProviders';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
     return (
-        <AuthProvider>
+        <AppProviders>
             <Router>
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
@@ -51,7 +51,7 @@ const App = () => {
                     />
                 </Routes>
             </Router>
-        </AuthProvider>
+        </AppProviders>
     );
 };
 

@@ -1,7 +1,7 @@
 import React   from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BsPerson, BsBarChartLine, BsGear, BsHouse } from "react-icons/bs";
-import Logo from '../../../assets/logo.png'
+import Logo from '../../../assets/logo.png';
 import './navbar.css';
 
 const NavBar: React.FC = () => {

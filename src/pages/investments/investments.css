@@ -1,0 +1,114 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    /* margin-bottom: 10px; */
+    /* border:1px solid red; */
+  }
+  
+  .tabs button {
+    width: 180px;
+    margin-right: 20px;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: none;
+    margin-bottom: -5px;
+    
+    border: 1px solid rgba(0, 0, 0, 0.1);  
+    border-bottom: none;
+    cursor: pointer;
+    /* background-color: #f0f0f0; */
+    background-color: white;
+  }
+  
+  .tabs button.active {
+    font-weight: bold;
+    background-color: white;
+    color: #0A437D ;
+  }
+  
+  .tab-content {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);  
+    background-color: white;
+  }
+
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    /* border:1px solid red; */
+}
+
+.tab-title {
+    /* border:1px solid red; */
+    color: #0A437D;
+    margin: 30px 0;
+}
+
+.action_container { 
+
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.button__action_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #0A437D;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: white; 
+}
+
+
+.button__action_trash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid red;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.action__icon__details {
+    color: #0A437D;
+    width: 15px;
+    height: 15px;
+}
+
+.action__icon__trash {
+    color: red;
+    width: 15px;
+    height: 15px;
+}
+
+
+.tab-header__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 0%;
+    color:#0A437D;
+    border:1px solid #0A437D;
+    background-color: white;
+    width: 150px;
+    height: 35px;
+    /* border-radius: 100%; */
+    /* background-color: red; */
+}
+
+.tab-header__button_icon{
+    color: green;
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+}

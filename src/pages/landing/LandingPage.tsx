@@ -34,9 +34,9 @@ const LandingPage = () => {
                 </div>
                 <div className='header-right'>
                     <nav className="navbar">
-                        <a href="#" className="nav-link">INICIO</a>
-                        <a href="#about" className="nav-link">NOSOTROS</a>
-                        <a href="#contact_us" className="nav-link">CONTACTANOS</a>
+                        <a href="#" className="landing-nav-link">INICIO</a>
+                        <a href="#about" className="landing-nav-link">NOSOTROS</a>
+                        <a href="#contact_us" className="landing-nav-link">CONTACTANOS</a>
                     </nav>
                     <Link to="/login" className="btn-start mx-5">Login</Link>
                 </div>

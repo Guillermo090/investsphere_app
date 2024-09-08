@@ -54,7 +54,7 @@
     padding: 0;
 }
 
-.nav-link {
+.landing-nav-link {
     margin: 0 15px;
     text-decoration: none;
     font-size: 16px;
@@ -63,11 +63,11 @@
     color: #0A437D !important;
 }
 
-.nav-link:hover {
+.landing-nav-link:hover {
     color: #1AB0D9 !important;
 }
 
-.nav-link::after {
+.landing-nav-link::after {
     content: '';
     display: block;
     width: 0;
@@ -79,7 +79,7 @@
     bottom: -5px;
 }
 
-.nav-link:hover::after {
+.landing-nav-link:hover::after {
     width: 100%;
 }
 

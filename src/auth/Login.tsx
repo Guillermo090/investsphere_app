@@ -31,6 +31,8 @@ const Login: React.FC = () => {
             return
         }
 
+        localStorage.removeItem('user');
+
         axios({
             method: 'post',
             url: INVESTSPHERE_APP_BACKEND_URL +  '/api/token/',
@@ -39,7 +41,7 @@ const Login: React.FC = () => {
         .then(({data}) => {
 
             const userObject = {
-                token: data.token,
+                token: data.access,
                 email: email
             };
 
@@ -48,8 +50,7 @@ const Login: React.FC = () => {
             setIsAuth(true);
             navigate('/dashboard');
         })
-        .catch(({response}) => {
-            console.log('Error:', response.data.detail);
+        .catch(() => {
             toast.error('Datos inválidos' , {
                 position: "top-right",
                 autoClose: 5000,

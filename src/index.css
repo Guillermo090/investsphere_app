@@ -25,9 +25,10 @@
 }
 
 .principal__content {
-  border: 1px solid rgba(0, 0, 0, 0.1);  
-  background-color: white;
+  /* border: 1px solid rgba(0, 0, 0, 0.1);  
+  background-color: white; */
   border-radius: 10px;
-  padding: 50px;
-  width: 80%;
+  /* padding: 50px; */
+  margin-top: 30px;
+  width: 95%;
 }
