@@ -20,7 +20,7 @@ const formatDate = (dateString: string) => {
     return `${year}-${month}-${day}`;
 }
 
-const CryptoList = () => {
+const CryptoList = ({isUpdated}) => {
 
     const [cryptos, setCryptos] = useState<CryptoInterface[]>([])
 
@@ -28,6 +28,12 @@ const CryptoList = () => {
 
 
     useEffect(() => {
+
+        updateCryptoList();
+
+    }, [isUpdated])
+
+    const updateCryptoList = () => {
 
         if (!isAuth) {
             toast.error("No tienes autorización");
@@ -45,7 +51,6 @@ const CryptoList = () => {
             setCryptos( data)
         })
         .catch(({response}) => {
-            // console.log('Error:', response.data.detail);
             toast.error('Datos inválidos' , {
                 position: "top-right",
                 autoClose: 5000,
@@ -53,13 +58,11 @@ const CryptoList = () => {
             });
             console.log(response.data)
             if ( response.data.code === 'token_not_valid' ){
-                // setCryptos( testCripto )
                 setIsAuth(false)
             }
         });
 
-
-    }, [])
+    }
         
     const columns = [
         // {

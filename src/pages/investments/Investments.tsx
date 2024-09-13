@@ -12,7 +12,8 @@ import {ModalContext} from "../../providers/BaseAppProvider";
 const Investments = () => {
 
     const [activeTab, setActiveTab] = useState(0);
-
+    const [isUpdated, setIsUpdated] = useState(0);
+    
     const { showModal, updateModalName } = useContext(ModalContext);
 
     const handleTabClick = ( index: number ) => {
@@ -66,10 +67,10 @@ const Investments = () => {
                                         
                                         Mas Crypto
                                     </button>
-                                    <ModalNewCripto />
+                                    <ModalNewCripto setIsUpdated={setIsUpdated} />
                                 </div>
 
-                                <CryptoList/>
+                                <CryptoList isUpdated={isUpdated} />
 
                             </div>
 
