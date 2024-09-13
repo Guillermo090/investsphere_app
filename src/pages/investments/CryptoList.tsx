@@ -4,11 +4,11 @@ import axios from 'axios';
 import {toast} from 'react-toastify';
 import { BsTrash, BsSearch } from "react-icons/bs";
 import { useAuth } from '../../auth/AuthContext';
+import CryptoInterface from './interfaces'
 
 const INVESTSPHERE_APP_BACKEND_URL = import.meta.env.VITE_INVESTSPHERE_APP_BACKEND_URL;
-const user = JSON.parse(localStorage.getItem("user"));
 
-const formatDate = (dateString ) => {
+const formatDate = (dateString: string) => {
     const date = new Date(dateString);
 
     // Obtener el año, mes y día
@@ -22,7 +22,7 @@ const formatDate = (dateString ) => {
 
 const CryptoList = () => {
 
-    const [cryptos, setCryptos] = useState([])
+    const [cryptos, setCryptos] = useState<CryptoInterface[]>([])
 
     const { isAuth, setIsAuth } = useAuth();
 
@@ -33,6 +33,8 @@ const CryptoList = () => {
             toast.error("No tienes autorización");
             return
         }
+
+        let user = JSON.parse(localStorage.getItem("user") || '{}');
 
         axios({
             method: 'get',
