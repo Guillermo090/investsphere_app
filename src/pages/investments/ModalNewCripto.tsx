@@ -10,8 +10,8 @@ import { useAuth } from '../../auth/AuthContext';
 const INVESTSPHERE_APP_BACKEND_URL = import.meta.env.VITE_INVESTSPHERE_APP_BACKEND_URL;
 
 interface ModalNewCriptoProps {
-    setIsUpdated:boolean;
     initialData?: CryptoInterface | null;
+    setIsUpdated:  React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ModalNewCripto = ({ setIsUpdated, initialData = null }: ModalNewCriptoProps) => {
@@ -77,14 +77,14 @@ const ModalNewCripto = ({ setIsUpdated, initialData = null }: ModalNewCriptoProp
             headers: { Authorization: `Bearer ${user.token}` },
             data: cryptoData
         })
-        .then(({data}) => {
+        .then(() => {
 
             toast.success('Datos creados' , {
                 position: "top-right",
                 autoClose: 5000,
                 closeOnClick: true
             });
-            setIsUpdated();
+            setIsUpdated(true);
             disableNewCryptoModal();
 
         })

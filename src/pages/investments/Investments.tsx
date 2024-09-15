@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from 'react'
+import {useContext, useState} from 'react'
 
 import NavBar from '../components/ui/NavBar';
 import RouteHeader from '../components/ui/RouteHeader';
@@ -12,7 +12,7 @@ import {ModalContext} from "../../providers/BaseAppProvider";
 const Investments = () => {
 
     const [activeTab, setActiveTab] = useState(0);
-    const [isUpdated, setIsUpdated] = useState(0);
+    const [isUpdated, setIsUpdated] = useState(false);
     
     const { showModal, updateModalName } = useContext(ModalContext);
 
